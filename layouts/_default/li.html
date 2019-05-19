@@ -1,0 +1,17 @@
+<li>
+  <a href="{{ or .Params.Link .Permalink }}">
+    {{- .Title -}}
+    {{- with .Params.Subtitle }}: {{ . }}{{ end -}}
+  </a>
+  {{ with .Params.Author }}by {{ . }}{{ end }}
+  {{ with .Params.Source }}from {{ . }}{{ end }}
+  {{ $taxo := "topics" }} <!-- Use the plural form here -->
+  <ul class="{{ $taxo }}">
+      {{ range .Param $taxo }}
+          {{ $name := . }}
+          {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+              <li><a href="{{ .Permalink }}">{{ $name }}</a></li>
+          {{ end }}
+      {{ end }}
+  </ul>
+</li>
