@@ -9,7 +9,7 @@ media_folder: "assets/images"
 collections:
   - name: resource
     label: Resource
-    folder: _resources
+    folder: content/resources
     create: true
     slug: "{{slug}}"
     fields:
@@ -46,7 +46,7 @@ collections:
         widget: markdown
   - name: "topic"
     label: "Topic"
-    folder: "_topics"
+    folder: "content/topics"
     create: true
     slug: "{{slug}}"
     fields:
