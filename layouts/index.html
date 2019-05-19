@@ -1,12 +1,18 @@
 {{ define "main" }}
-  {{ range .Pages.GroupBy "Section" }}
-  <section class="{{ .Key }}">
-    <h3>{{ .Key }}</h3>
+  <section class="resources">
+    <h3>Resources</h3>
     <ul>
-        {{ range .Pages }}
-          {{ .Render "li"}}
-        {{ end }}
+      {{ range where .Pages "Section" "resources" }}
+        {{ .Render "li"}}
+      {{ end }}
     </ul>
   </section>
-  {{ end }}
+  <section class="topics">
+    <h3>Topics</h3>
+    <ul>
+      {{ range where .Pages "Section" "topics" }}
+        {{ .Render "li"}}
+      {{ end }}
+    </ul>
+  </section>
 {{ end }}
