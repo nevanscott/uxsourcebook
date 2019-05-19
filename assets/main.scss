@@ -2,6 +2,10 @@ body {
   line-height: 1.5;
 }
 
+li {
+  margin: 0.25em 0;
+}
+
 a {
   color: mediumblue;
   &:hover {
@@ -10,14 +14,18 @@ a {
 }
 
 .topics {
+  $gap: 0.5em;
   color: grey;
   font-size: smaller;
-  display: inline;
+  display: inline-flex;
+  gap: $gap;
   list-style: none;
   margin: 0;
   padding: 0;
   li {
     display: inline;
+    margin: 0;
+    margin-inline-start: $gap;
   }
   a {
     color: inherit;

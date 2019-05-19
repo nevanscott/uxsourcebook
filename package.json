@@ -1,0 +1,24 @@
+{
+  "name": "uxsourcebook",
+  "version": "0.1.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "hugo",
+    "dev": "hugo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nevanscott/uxsourcebook.git"
+  },
+  "author": "Nevan Scott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nevanscott/uxsourcebook/issues"
+  },
+  "homepage": "https://github.com/nevanscott/uxsourcebook#readme",
+  "dependencies": {
+    "postcss-cli": "^6.1.2",
+    "postcss-preset-env": "^6.6.0"
+  }
+}
