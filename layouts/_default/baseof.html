@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
   <body>
-    {{ block "main" . }}
-      {{ .Content }}
-    {{ end }}
+    <header role="banner">
+      <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
+    </header>
+    <main>
+      {{ block "main" . }}
+        {{ .Content }}
+      {{ end }}
+    </main>
   </body>
 </html>
