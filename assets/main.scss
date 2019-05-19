@@ -1,23 +1,48 @@
 body {
+  color: #333;
+  font-family: system-ui, sans-serif;
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 li {
-  margin: 0.25em 0;
+  margin: 1.5em 0;
 }
 
 a {
-  color: mediumblue;
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+  border-bottom: solid 2px dodgerblue;
   &:hover {
-    color: darkblue;
+    color: mediumblue;
+    border-color: currentColor;
   }
+}
+
+.subtitle {
+  &::before {
+    content: ": ";
+  }
+}
+
+.byline {
+  display: block;
+}
+
+.source {
+  display: block;
 }
 
 .topics {
   $gap: 0.5em;
   color: grey;
   font-size: smaller;
-  display: inline-flex;
+  display: flex;
   gap: $gap;
   list-style: none;
   margin: 0;
@@ -25,10 +50,13 @@ a {
   li {
     display: inline;
     margin: 0;
+  }
+  li + li {
     margin-inline-start: $gap;
   }
   a {
     color: inherit;
+    border-color: currentColor;
     &:hover {
       color: darkslateblue;
     }
